@@ -1,0 +1,27 @@
+.logo {
+    height: 70px;
+    width: 70px;
+}
+
+.header {
+    grid-area: Head;
+    display: flex;
+    padding: 0;
+}
+
+.inputBox {
+    color: #fff;
+    background-color: #2d2c2e;
+    padding: 0 0 0 20px;
+    border: none;
+    border-radius: 10px;
+    margin: 15px;
+    height: 40px;
+    width: 230px;
+    outline: none;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}
