@@ -1,0 +1,29 @@
+.data {
+    grid-area: Data;
+    height: 100px;
+    padding: 15px 20px;
+}
+
+.name {
+    font-size: 19px;
+}
+
+.status {
+    font-size: 13px;
+    border-bottom: 1px solid #343235;
+    padding: 5px 0 10px 0;
+}
+
+.info {
+    padding: 10px 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.info_item {
+    display: block;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+}

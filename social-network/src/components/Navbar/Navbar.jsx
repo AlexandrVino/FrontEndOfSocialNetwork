@@ -1,9 +1,9 @@
 import React from 'react';
-import classes from './Nav.module.css';
+import nav_classes from './Nav.module.css';
 
 
 const Navbar = () => {
-    return <nav className={`${classes.nav} widget`}>
+    return <nav className={`${nav_classes.nav} widget`}>
         <ul>
             <li><a href="#">Profile</a></li>
             <li><a href="#">News</a></li>

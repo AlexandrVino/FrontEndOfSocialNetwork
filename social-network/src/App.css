@@ -1,32 +1,29 @@
 
 body {
-  background-color: #303030;
-  color: #ffffff;
+    background-color: #303030;
+    color: #ffffff;
+    font-family: "Roboto Light", sans-serif;
 }
 
 .widget {
-  background-color: #272627;
-  border-radius: 10px;
-  padding: 10px;
+    background-color: #272627;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 .container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .app-wrapper {
-  display: grid;
-  grid-template-areas:
-          "Head Head"
-          "Nav Content";
-  grid-template-rows: 70px 1fr;
-  grid-template-columns: 2fr 10fr;
-  grid-gap: 10px;
+    display: grid;
+    grid-template-areas:
+          "Head Head Head"
+          "Nav Profile Data";
+    grid-template-rows: 70px 400px 400px;
+    grid-template-columns: 170px 220px 540px;
+    grid-gap: 10px;
 }
 
-
-.content {
-  grid-area: Content;
-}

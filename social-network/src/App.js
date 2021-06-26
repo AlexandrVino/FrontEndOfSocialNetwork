@@ -1,6 +1,8 @@
 import './App.css';
 import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
+import Profile from "./components/Profile/Profile";
+import Data from "./components/Data/Data";
 
 function App() {
   return (
@@ -9,9 +11,8 @@ function App() {
 
               <Header/>
               <Navbar/>
-              <div className={'content widget'}>
-
-              </div>
+              <Profile/>
+              <Data/>
 
               <footer>
 
