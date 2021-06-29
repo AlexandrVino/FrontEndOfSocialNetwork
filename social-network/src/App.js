@@ -1,8 +1,7 @@
 import './App.css';
 import Header from "./components/Header/Header";
 import Navbar from "./components/Navbar/Navbar";
-import Profile from "./components/Profile/Profile";
-import Data from "./components/Data/Data";
+import Content from "./components/Content/Content";
 
 function App() {
   return (
@@ -11,8 +10,7 @@ function App() {
 
               <Header/>
               <Navbar/>
-              <Profile/>
-              <Data/>
+              <Content/>
 
               <footer>
 

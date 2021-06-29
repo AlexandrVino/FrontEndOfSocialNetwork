@@ -1,6 +1,5 @@
 import React from 'react';
 import data_classes from './Data.module.css';
-import logo from "../../logo.svg";
 
 
 const Data = () => {

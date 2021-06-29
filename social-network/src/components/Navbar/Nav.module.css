@@ -1,9 +1,12 @@
 .nav {
     grid-area: Nav;
+    max-height: 240px;
+    color: #97979b;
 }
+
 li {
     list-style-type: none;
-    margin: 0 0 7px 20px;
+    margin: 0;
     line-height: 1;
 }
 
@@ -13,6 +16,14 @@ ul {
 }
 
 a {
-    color: #fff;
+    display: block;
+    color: #97979b;
     text-decoration: none;
+    height: 30px;
+    line-height: 30px;
+}
+
+a span {
+    height: 30px;
+    margin-right: 10px;
 }

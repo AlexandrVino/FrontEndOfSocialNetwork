@@ -1,3 +1,10 @@
 .content {
     grid-area: Content;
+    display: grid;
+    grid-template-areas:
+          "Profile Data"
+          "Profile AddNewPost";
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 220px 570px;
+    grid-gap: 10px;
 }

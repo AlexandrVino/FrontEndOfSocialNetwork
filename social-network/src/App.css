@@ -14,16 +14,19 @@ body {
 .container {
     width: 100%;
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 10px auto;
 }
 
 .app-wrapper {
     display: grid;
     grid-template-areas:
-          "Head Head Head"
-          "Nav Profile Data";
-    grid-template-rows: 70px 400px 400px;
-    grid-template-columns: 170px 220px 540px;
+          "Head Head"
+          "Nav Content"
+          "Nav Content";
+    grid-template-rows: 70px 1fr;
+    grid-template-columns: 190px 800px;
     grid-gap: 10px;
+    width: 100%;
+    max-width: 1000px;
 }
 
