@@ -1,0 +1,261 @@
+.page_dialogs {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dialogs {
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    line-height: 40px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #353235;
+}
+
+.title_name {
+    width: 250px;
+    text-align: center;
+}
+
+.back {
+    max-width: 150px;
+    width: 100%;
+}
+
+.back a {
+    height: 40px;
+    line-height: 40px;
+}
+
+.dialog_user {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #fff;
+    padding-left: 0;
+    margin-left: 110px;
+}
+
+.dialog_user img {
+    width: 40px;
+    height: 40px;
+}
+
+.menu {
+    width: 44px;
+}
+
+.footer {
+
+    display: flex;
+    border-top: 1px solid #353235;
+    padding-top: 10px;
+    margin-top: 10px;
+    height: 40px;
+    width: 550px;
+
+}
+
+.inputBox {
+    color: #c3c3c8;
+    background-color: #2d2c2e;
+    display: flex;
+
+    border-radius: 10px;
+    height: 40px;
+    width: 480px;
+    outline: none;
+    font-size: 18px;
+    padding: 0 0 0 5px;
+
+}
+
+.all_messages {
+    height: calc(100vh - 122px);
+}
+
+.a:hover {
+    background-color: transparent;
+}
+
+.inputBox span {
+    margin: auto 0;
+}
+
+
+.inputBox input {
+    border: none;
+    height: 40px;
+    padding: 0 0 0 10px;
+    width: 380px;
+    outline: none;
+    font-size: 15px;
+    color: #fff;
+    background-color: transparent;
+}
+
+.footer span svg {
+    font-size: 24px;
+    width: 24px;
+    height: 24px;
+    margin: 8px;
+    opacity: 0.7;
+}
+
+.footer li {
+    list-style-type: none;
+    margin: 0;
+    line-height: 1;
+    height: 40px;
+
+}
+
+.footer li span {
+    height: 40px;
+    line-height: 1;
+    display: inline-block;
+    font-size: 13px !important;
+}
+
+.footer li span svg {
+
+    font-size: 5px !important;
+}
+
+.footer ul {
+    margin: 0;
+    padding: 0;
+}
+
+.message {
+    display: flex;
+    height: 40px;
+    margin-top: 10px;
+}
+
+.mess_author_img {
+    background-color: #fff;
+    border-radius: 20px;
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+}
+
+a:hover {
+    background-color: transparent;
+}
+
+.mess_name {
+    display: block;
+    color: #ff0000;
+    font-size: 13.5px;
+    height: 20px;
+    line-height: 20px;
+}
+
+.mess_text {
+    font-size: 13px;
+    color: #d4d4d5;
+    height: 20px;
+    line-height: 20px;
+}
+
+.mess_time {
+    font-size: 11.5px;
+    color: #b5b5ba;
+    height: 20px;
+    line-height: 20px;
+    margin-left: 10px;
+}
+
+.mess_name:hover {
+    background-color: transparent;
+}
+
+.avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+}
+
+.search input {
+    border: none;
+    height: 40px;
+    padding: 0 0 0 10px;
+    width: 460px;
+    outline: none;
+    font-size: 15px;
+    color: #fff;
+    background-color: transparent;
+}
+
+.search span {
+    font-size: 20px;
+    color: #c3c3c8;
+    margin-left: 5px;
+}
+
+.search_icon {
+    font-size: 16px !important;
+}
+
+.nav {
+    width: 200px;
+    height: 120px;
+}
+
+.active {
+    border-left: red solid 2px;
+    background-color: #353235;
+}
+
+.area_items {
+    border-top: 1px solid #343235;
+}
+
+.item {
+    display: flex;
+    height: 60px;
+    border-bottom: 1px solid #343235;
+    cursor: pointer;
+    border-radius: 0;
+}
+
+.item:hover {
+    display: flex;
+    background-color: #343235;
+    cursor: pointer;
+}
+
+
+.name {
+    color: #c3c3c8;
+    font-size: 17px;
+    line-height: 30px;
+}
+
+.last_mess {
+    display: flex;
+}
+
+.last_mess .data {
+    font-size: 14px;
+    color: #c3c3c8;
+    line-height: 25px;
+    margin-left: 5px;
+}
+
+.author {
+    height: 25px;
+    width: 25px;
+    border-radius: 13px;
+    background-color: white;
+}
