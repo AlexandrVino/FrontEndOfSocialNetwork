@@ -1,12 +1,24 @@
 import React from 'react';
 import profile_classes from './Profile.module.css';
-import logo from "../../logo.svg";
+import Avatar from "../Avatar/Avatar";
+import Data from "../Data/Data";
+import AddNewPost from "../AddNewPost/AddNewPost";
+import Post from "../Post/Post";
 
 
-const Profile = () => {
-    return <div className={`${profile_classes.profile} widget`}>
-        <img className={profile_classes.avatar} src={logo} alt="avatar"/>
-        <button className={profile_classes.edit}>Edit</button>
+const Profile = (profile_data) => {
+
+    profile_data = profile_data.profile_data
+
+    return <div className={`${profile_classes.content}`}>
+        <div className={`${profile_classes.row}`}>
+            <Avatar/>
+        </div>
+        <div className={`${profile_classes.row}`}>
+            <Data/>
+            <AddNewPost/>
+            {profile_data.posts.map(item => Post(item))}
+        </div>
     </div>
 }
 
