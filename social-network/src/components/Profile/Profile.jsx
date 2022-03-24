@@ -6,9 +6,9 @@ import AddNewPost from "../AddNewPost/AddNewPost";
 import Post from "../Post/Post";
 
 
-const Profile = (profile_data) => {
+const Profile = (props) => {
 
-    profile_data = profile_data.profile_data
+    const profile_data = props.profile_data
 
     return <div className={`${profile_classes.content}`}>
         <div className={`${profile_classes.row}`}>

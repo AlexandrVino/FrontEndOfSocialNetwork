@@ -14,14 +14,14 @@ import {Menu} from 'antd';
 const {SubMenu} = Menu;
 
 
-const Message = (data) => {
+const Message = (props) => {
     return <div className={mess_classes.message}>
-        <img className={mess_classes.mess_author_img} src={data.author_photo} alt="logo"/>
+        <img className={mess_classes.mess_author_img} src={props.author_photo} alt="logo"/>
         <div>
-            <NavLink to={'#'} className={mess_classes.mess_name}>{data.author_name}</NavLink>
-            <div className={mess_classes.mess_text}>{data.mess}</div>
+            <NavLink to={'#'} className={mess_classes.mess_name}>{props.author_name}</NavLink>
+            <div className={mess_classes.mess_text}>{props.mess}</div>
         </div>
-        <div className={mess_classes.mess_time}>{data.time}</div>
+        <div className={mess_classes.mess_time}>{props.time}</div>
     </div>
 }
 
@@ -43,7 +43,7 @@ const MessageMenu = () => {
 
 const Dialog = (props) => {
 
-    props = props.props
+    const dialog_mess = props.props
 
     return (
         <div>
@@ -52,11 +52,11 @@ const Dialog = (props) => {
                 <div className={mess_classes.back}>
                     <NavLink className={`${nav_classes.a} ${mess_classes.a}`} to={'/mess/all'}><ArrowLeftOutlined/>Back</NavLink>
                 </div>
-                <div className={mess_classes.title_name}>{`${props.firstName} ${props.lastName}`}</div>
+                <div className={mess_classes.title_name}>{`${dialog_mess.firstName} ${dialog_mess.lastName}`}</div>
                 <NavLink className={mess_classes.dialog_user} to={'#'}><img src={logo} alt="logo"/></NavLink>
             </div>
             <div className={mess_classes.all_messages}>
-                {props.messages.map(mess_item => Message(mess_item))}
+                {dialog_mess.messages.map(mess_item => Message(mess_item))}
             </div>
             <div className={mess_classes.footer}>
                 <MessageMenu/>
@@ -89,9 +89,9 @@ const AllMessages = (props) => {
     </div>
 }
 
-const Messages = (mess) => {
+const Messages = (props) => {
 
-    mess = mess.mess
+    const mess = props.mess
 
     return <div className={mess_classes.page_dialogs}>
         <div className={`${mess_classes.dialogs} widget`}>
