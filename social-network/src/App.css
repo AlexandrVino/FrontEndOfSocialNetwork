@@ -15,6 +15,7 @@ span {
     background-color: #272627;
     border-radius: 10px;
     padding: 10px;
+    margin-bottom: 10px;
 }
 
 .container {
@@ -38,7 +39,19 @@ span {
 
 a {
     text-decoration: none;
+    color: #ffffff;
 }
+
+a:link {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #ffffff;
+}
+
 
 .ant-menu-submenu-title {
     padding-left: 0 !important;

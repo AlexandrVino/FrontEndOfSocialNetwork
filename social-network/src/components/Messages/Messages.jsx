@@ -42,7 +42,9 @@ const MessageMenu = () => {
 }
 
 const Dialog = (props) => {
-    console.log(props, 111)
+
+    props = props.props
+
     return (
         <div>
             <div className={mess_classes.title}>
@@ -50,11 +52,11 @@ const Dialog = (props) => {
                 <div className={mess_classes.back}>
                     <NavLink className={`${nav_classes.a} ${mess_classes.a}`} to={'/mess/all'}><ArrowLeftOutlined/>Back</NavLink>
                 </div>
-                <div className={mess_classes.title_name}>{`${props.props.firstName} ${props.props.lastName}`}</div>
+                <div className={mess_classes.title_name}>{`${props.firstName} ${props.lastName}`}</div>
                 <NavLink className={mess_classes.dialog_user} to={'#'}><img src={logo} alt="logo"/></NavLink>
             </div>
             <div className={mess_classes.all_messages}>
-                {props.props.messages.map(mess_item => Message(mess_item))}
+                {props.messages.map(mess_item => Message(mess_item))}
             </div>
             <div className={mess_classes.footer}>
                 <MessageMenu/>

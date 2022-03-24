@@ -29,3 +29,15 @@
     text-align: center;
     line-height: normal;
 }
+
+.info_item:link  {
+    text-decoration: none;
+    color: #fff;
+}
+
+.info_item:visited  {
+    text-decoration: none;
+    color: #fff;
+}
+
+

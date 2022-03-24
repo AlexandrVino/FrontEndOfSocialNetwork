@@ -22,16 +22,22 @@
     size: 18px 18px;
     margin: auto 20px auto 0;
     color: #c3c3c8;
+    height: 20px;
 }
 
 .send_icon {
-    font-size: 25px;
-    size: 25px 25px;
+    height: 20px;
     margin: auto 5px auto 15px;
+}
+
+.send_icon span {
+    height: 20px;
+    font-size: 20px;
+    size: 20px 20px;
     color: #c3c3c8;
 }
 
-.icon span{
+.icon span {
     font-size: 18px;
     size: 18px 18px;
     margin: 0 5px ;
