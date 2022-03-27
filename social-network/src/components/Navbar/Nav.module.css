@@ -2,6 +2,7 @@
     grid-area: Nav;
     max-height: 240px;
     color: #97979b;
+    width: 150px;
 }
 
 .li {

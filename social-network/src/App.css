@@ -31,7 +31,7 @@ span {
           "Nav Content"
           "Nav Content";
     grid-template-rows: 70px 1fr;
-    grid-template-columns: 190px 800px;
+    grid-template-columns: 170px 800px;
     grid-gap: 10px;
     width: 100%;
     max-width: 1000px;

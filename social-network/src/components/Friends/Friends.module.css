@@ -1,0 +1,54 @@
+.friend_item {
+    width: 66px;
+    margin-top: 10px;
+}
+
+.friend_photo {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #999999;
+    display: block;
+    margin: 0 auto;
+
+}
+
+.friend_name {
+    display: block;
+    width: 100%;
+    margin: 10px auto 0 auto;
+    text-align: center;
+    font-size: 13px;
+    color: #ff0000 !important;
+}
+
+.friend_name:hover {
+    text-decoration: underline;
+}
+
+
+.data {
+
+}
+
+.friends {
+    margin: 0 10px;
+    height: 20px;
+    line-height: 20px;
+}
+
+.count {
+    height: 20px;
+    line-height: 20px;
+    margin-left: 10px;
+}
+
+.friends_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+
+

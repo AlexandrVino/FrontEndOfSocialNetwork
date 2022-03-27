@@ -4,6 +4,8 @@ import Avatar from "../Avatar/Avatar";
 import Data from "../Data/Data";
 import AddNewPost from "../AddNewPost/AddNewPost";
 import Post from "../Post/Post";
+import Friends from "../Friends/Friends";
+import Groups from "../Groups/Groups";
 
 
 const Profile = (props) => {
@@ -13,10 +15,13 @@ const Profile = (props) => {
     return <div className={`${profile_classes.content}`}>
         <div className={`${profile_classes.row}`}>
             <Avatar/>
+            <Friends props={profile_data.friends}/>
+            <Groups props={profile_data.groups}/>
+
         </div>
         <div className={`${profile_classes.row}`}>
             <Data/>
-            <AddNewPost/>
+            <AddNewPost addPost={props.addPost}/>
             {profile_data.posts.map(item => Post(item))}
         </div>
     </div>

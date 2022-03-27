@@ -25,6 +25,21 @@ const Message = (props) => {
     </div>
 }
 
+const linkToMessages = (props) => {
+
+    return <NavLink to="/mess/dialog/1" className={mess_classes.item}>
+        <img className={mess_classes.avatar} src={logo} alt="logo"/>
+        <div className={mess_classes.info}>
+            <div className={mess_classes.name}>{props.firstName} {props.lastName}</div>
+            <div className={mess_classes.last_mess}>
+                <img className={mess_classes.author} src={logo} alt="logo"/>
+                <div className={mess_classes.data}>{props.lastMessage}</div>
+            </div>
+        </div>
+    </NavLink>
+}
+
+
 const MessageMenu = () => {
     return (
         <div className={mess_classes.menu}>
@@ -116,20 +131,6 @@ const Messages = (props) => {
             </ul>
         </nav>
     </div>
-}
-
-const linkToMessages = (props) => {
-
-    return <NavLink to="/mess/dialog/1" className={mess_classes.item}>
-        <img className={mess_classes.avatar} src={logo} alt="logo"/>
-        <div className={mess_classes.info}>
-            <div className={mess_classes.name}>{props.firstName} {props.lastName}</div>
-            <div className={mess_classes.last_mess}>
-                <img className={mess_classes.author} src={logo} alt="logo"/>
-                <div className={mess_classes.data}>{props.lastMessage}</div>
-            </div>
-        </div>
-    </NavLink>
 }
 
 

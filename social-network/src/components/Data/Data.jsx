@@ -1,5 +1,6 @@
 import React from 'react';
 import data_classes from './Data.module.css';
+import {NavLink} from "react-router-dom";
 
 
 const Data = () => {
@@ -7,18 +8,18 @@ const Data = () => {
         <div className={data_classes.name}>Винокуров Александр</div>
         <div className={data_classes.status}>ВундерВуфля</div>
         <div className={data_classes.info}>
-            <a className={data_classes.info_item} href="#">
+            <NavLink className={data_classes.info_item} to="#">
                 <div>Friends</div>
                 <div>41</div>
-            </a>
-            <a className={data_classes.info_item} href="#">
+            </NavLink>
+            <NavLink className={data_classes.info_item} to="#">
                 <div>Photos</div>
                 <div>6</div>
-            </a>
-            <a className={data_classes.info_item} href="#">
+            </NavLink>
+            <NavLink className={data_classes.info_item} to="#">
                 <div>Music</div>
                 <div>43</div>
-            </a>
+            </NavLink>
         </div>
     </div>
 }
