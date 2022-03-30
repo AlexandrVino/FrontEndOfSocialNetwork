@@ -2,25 +2,17 @@ import React from 'react';
 import post_classes from './AddNewPost.module.css';
 import logo from "../../logo.svg";
 import {CameraOutlined, PlayCircleOutlined, SendOutlined, SoundOutlined} from "@ant-design/icons";
+import {addPostActionCreator} from "../../redux/profile_reducer";
 
-
-let addPostActionCreator = (props) => {
-
-    return {
-        type: 'ADD-POST',
-        postMessage: props.postMessage
-    }
-}
 
 const AddNewPost = (props) => {
 
     let newPostElement = React.createRef();
 
-    function OnClickTest() {
+    function addPostFunc() {
 
         let data = newPostElement.current.value;
-        props.dispatch(addPostActionCreator({ postMessage: data}))
-        props.renderPage()
+        props.dispatch(addPostActionCreator({ postMessage: data}), props.renderPage)
     }
 
 
@@ -35,7 +27,7 @@ const AddNewPost = (props) => {
                 <CameraOutlined/>
                 <PlayCircleOutlined/>
                 <SoundOutlined/>
-                <SendOutlined onClick={OnClickTest}/>
+                <SendOutlined onClick={addPostFunc}/>
 
             </div>
 

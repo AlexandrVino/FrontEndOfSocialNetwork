@@ -10,6 +10,7 @@ import {
 import {NavLink, Route} from "react-router-dom";
 import logo from "../../logo.svg";
 import {Menu} from 'antd';
+import {addMessageActionCreator} from "../../redux/dialog_reducer";
 
 const {SubMenu} = Menu;
 
@@ -58,6 +59,14 @@ const MessageMenu = () => {
 
 const Dialog = (props) => {
 
+    let newMessElement = React.createRef();
+
+    function addMessageFunc() {
+
+        let data = newMessElement.current.value;
+        props.dispatch(addMessageActionCreator({ message: data}), props.renderPage)
+    }
+
     const dialog_mess = props.props
 
     return (
@@ -77,12 +86,12 @@ const Dialog = (props) => {
                 <MessageMenu/>
                 <div className={mess_classes.inputBox}>
 
-                    <input type={'text'} placeholder={'Write something'}/>
+                    <input type={'text'} placeholder={'Write something'} ref={newMessElement}/>
                     <SmileOutlined/>
 
                 </div>
                 <AudioOutlined style={{width: '44px'}}/>
-                <SendOutlined style={{width: '44px'}}/>
+                <SendOutlined style={{width: '44px'}} onClick={addMessageFunc}/>
             </div>
         </div>)
 }
@@ -112,7 +121,9 @@ const Messages = (props) => {
         <div className={`${mess_classes.dialogs} widget`}>
 
             <Route path='/mess/all' render={() => <AllMessages props={mess.allMessages}/>}/>
-            <Route path='/mess/dialog/1' render={() => <Dialog props={mess.dialog}/>}/>
+            <Route path='/mess/dialog/1' render={() => <Dialog props={mess.dialog}
+                                                               renderPage={props.renderPage}
+                                                               dispatch={props.dispatch}/>}/>
 
         </div>
         <nav className={`${mess_classes.nav} widget ${nav_classes.nav}`}>

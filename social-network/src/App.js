@@ -18,7 +18,9 @@ function App(props) {
                     <Route path='/me' render={() => <Profile profile_data={props.state.profilePage}
                                                              dispatch={props.dispatch}
                                                              renderPage={props.renderPage}/>}/>
-                    <Route path='/mess' render={() => <Messages mess={props.state.messagesPage}/>}/>
+                    <Route path='/mess' render={() => <Messages mess={props.state.messagesPage}
+                                                                renderPage={props.renderPage}
+                                                                dispatch={props.dispatch}/>}/>
 
                 </div>
             </div>

@@ -1,4 +1,7 @@
 import logo from "../logo.svg";
+import profileReducer from "./profile_reducer";
+import dialogReducer from "./dialog_reducer";
+
 
 let store = {
     _state: {
@@ -45,23 +48,16 @@ let store = {
         }
     },
 
-    addPost(postMessage) {
-
-        let newPost = {
-            id: 5, message: postMessage, likesCount: 0, firstName: 'Александр', lastName: 'Винокуров', image: logo
-        }
-
-        this._state.profilePage.posts.unshift(newPost)
-    },
-
     getState() {
         return this._state
     },
 
-    dispatch(action) {
-        if (action.type === 'ADD-POST') {
-            this.addPost(action.postMessage)
-        }
+    dispatch(action, render) {
+
+        this._state.profilePage = profileReducer(this._state.profilePage, action)
+        this._state.messagesPage = dialogReducer(this._state.messagesPage, action)
+
+        render(this)
     }
 
 }

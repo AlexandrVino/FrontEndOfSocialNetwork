@@ -5,7 +5,7 @@ import React from "react";
 import App from "./App";
 import store from "./redux/state";
 
-let renderPage = () => {
+let renderPage = (store) => {
 
     ReactDOM.render(
         <React.StrictMode>
@@ -15,6 +15,6 @@ let renderPage = () => {
     );
 }
 
-renderPage()
+renderPage(store)
 
 reportWebVitals();
