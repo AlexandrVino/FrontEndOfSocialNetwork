@@ -1,9 +1,20 @@
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import {renderPage} from "./render";
-import {addPost} from "./redux/state";
-import state from "./redux/state";
+import ReactDOM from "react-dom";
+import React from "react";
+import App from "./App";
+import store from "./redux/state";
 
-renderPage(state, addPost)
+let renderPage = () => {
+
+    ReactDOM.render(
+        <React.StrictMode>
+            <App state={store.getState()} dispatch={store.dispatch.bind(store)} renderPage={renderPage}/>
+        </React.StrictMode>,
+        document.getElementById('root')
+    );
+}
+
+renderPage()
 
 reportWebVitals();

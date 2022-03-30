@@ -21,7 +21,7 @@ const Profile = (props) => {
         </div>
         <div className={`${profile_classes.row}`}>
             <Data/>
-            <AddNewPost addPost={props.addPost}/>
+            <AddNewPost dispatch={props.dispatch} renderPage={props.renderPage}/>
             {profile_data.posts.map(item => Post(item))}
         </div>
     </div>

@@ -4,6 +4,14 @@ import logo from "../../logo.svg";
 import {CameraOutlined, PlayCircleOutlined, SendOutlined, SoundOutlined} from "@ant-design/icons";
 
 
+let addPostActionCreator = (props) => {
+
+    return {
+        type: 'ADD-POST',
+        postMessage: props.postMessage
+    }
+}
+
 const AddNewPost = (props) => {
 
     let newPostElement = React.createRef();
@@ -11,7 +19,8 @@ const AddNewPost = (props) => {
     function OnClickTest() {
 
         let data = newPostElement.current.value;
-        props.addPost(data)
+        props.dispatch(addPostActionCreator({ postMessage: data}))
+        props.renderPage()
     }
 
 
@@ -24,8 +33,8 @@ const AddNewPost = (props) => {
             </div>
             <div className={post_classes.icon}>
                 <CameraOutlined/>
-                <PlayCircleOutlined />
-                <SoundOutlined />
+                <PlayCircleOutlined/>
+                <SoundOutlined/>
                 <SendOutlined onClick={OnClickTest}/>
 
             </div>

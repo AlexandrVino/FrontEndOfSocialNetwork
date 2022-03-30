@@ -16,7 +16,8 @@ function App(props) {
                     <Navbar/>
 
                     <Route path='/me' render={() => <Profile profile_data={props.state.profilePage}
-                                                             addPost={props.addPost}/>}/>
+                                                             dispatch={props.dispatch}
+                                                             renderPage={props.renderPage}/>}/>
                     <Route path='/mess' render={() => <Messages mess={props.state.messagesPage}/>}/>
 
                 </div>
